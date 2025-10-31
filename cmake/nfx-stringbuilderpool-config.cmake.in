@@ -7,11 +7,11 @@
 #   find_package(nfx-stringbuilderpool REQUIRED)
 #   target_link_libraries(your_target PRIVATE nfx-stringbuilderpool::nfx-stringbuilderpool)  # Shared library
 #   # OR
-#   target_link_libraries(your_target PRIVATE nfx-stringbuilderpool::static)        # Static library
+#   target_link_libraries(your_target PRIVATE nfx-stringbuilderpool::static)                 # Static library
 #
 # Available targets:
 #   nfx-stringbuilderpool::nfx-stringbuilderpool - Shared library (StringBuilderPool)
-#   nfx-stringbuilderpool::static        - Static library (StringBuilderPool)
+#   nfx-stringbuilderpool::static                - Static library (StringBuilderPool)
 #==============================================================================
 
 @PACKAGE_INIT@

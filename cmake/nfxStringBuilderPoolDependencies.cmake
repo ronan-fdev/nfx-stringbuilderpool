@@ -28,19 +28,12 @@ endif()
 set(FETCHCONTENT_QUIET OFF)
 
 #----------------------------
-# Dependency version requirements
-#----------------------------
-
-set(NFX_STRINGBUILDERPOOL_GTEST_MIN_VERSION          "1.12.1")
-set(NFX_STRINGBUILDERPOOL_BENCHMARK_MIN_VERSION      "1.9.4" )
-
-#----------------------------
 # Dependency declarations
 #----------------------------
 
 # --- Google test ---
 if(NFX_STRINGBUILDERPOOL_BUILD_TESTS)
-	find_package(GTest ${NFX_STRINGBUILDERPOOL_GTEST_MIN_VERSION} QUIET)
+	find_package(GTest QUIET)
 	
 	if(NOT GTest_FOUND)
 		message(STATUS "GoogleTest not found on system, using FetchContent")
@@ -62,13 +55,13 @@ endif()
 
 # --- Google benchmark ---
 if(NFX_STRINGBUILDERPOOL_BUILD_BENCHMARKS)
-	find_package(benchmark ${NFX_STRINGBUILDERPOOL_BENCHMARK_MIN_VERSION} QUIET)
+	find_package(benchmark QUIET)
 	
 	if(NOT benchmark_FOUND)
 		message(STATUS "Google Benchmark not found on system, using FetchContent")
 		
 		set(BENCHMARK_ENABLE_TESTING         OFF  CACHE BOOL  "Build benchmark tests"                          FORCE)
-		set(BENCHMARK_ENABLE_EXCEPTIONS      ON   CACHE BOOL  "Enable exceptions in benchmark library"         FORCE)
+		set(BENCHMARK_ENABLE_EXCEPTIONS      OFF  CACHE BOOL  "Enable exceptions in benchmark library"         FORCE)
 		set(BENCHMARK_ENABLE_LTO             OFF  CACHE BOOL  "Enable link time optimization"                  FORCE)
 		set(BENCHMARK_USE_LIBCXX             OFF  CACHE BOOL  "Use libc++ as the standard library"             FORCE)
 		set(BENCHMARK_ENABLE_WERROR          OFF  CACHE BOOL  "Treat warnings as errors"                       FORCE)

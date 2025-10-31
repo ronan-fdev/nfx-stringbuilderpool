@@ -59,9 +59,9 @@ include(GNUInstallDirs)
 # Directory configuration
 #----------------------------------------------
 
-set(NFX_STRINGBUILDERPOOL_DIR          "${CMAKE_CURRENT_SOURCE_DIR}"   CACHE PATH  "Root directory"     )
-set(NFX_STRINGBUILDERPOOL_INCLUDE_DIR  "${NFX_STRINGBUILDERPOOL_DIR}/include"  CACHE PATH  "Include directory"  )
-set(NFX_STRINGBUILDERPOOL_SOURCE_DIR   "${NFX_STRINGBUILDERPOOL_DIR}/src"      CACHE PATH  "Source directory"   )
+set(NFX_STRINGBUILDERPOOL_DIR          "${CMAKE_CURRENT_SOURCE_DIR}"           CACHE PATH  "Root directory"   )
+set(NFX_STRINGBUILDERPOOL_INCLUDE_DIR  "${NFX_STRINGBUILDERPOOL_DIR}/include"  CACHE PATH  "Include directory")
+set(NFX_STRINGBUILDERPOOL_SOURCE_DIR   "${NFX_STRINGBUILDERPOOL_DIR}/src"      CACHE PATH  "Source directory" )
 
 #----------------------------------------------
 # Output directory configuration

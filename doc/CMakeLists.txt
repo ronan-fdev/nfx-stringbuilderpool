@@ -54,7 +54,7 @@ if(Doxygen_FOUND)
 	set(DOXYGEN_QT_AUTOBRIEF             "NO")
 	set(DOXYGEN_MULTILINE_CPP_IS_BRIEF   "NO")
 
-	# --- Project ---
+	# --- Output and File Settings ---
 	set(DOXYGEN_RESOLVE_UNNAMED_PARAMS   "YES")
 	set(DOXYGEN_INLINE_INFO              "YES")
 	set(DOXYGEN_SORT_MEMBER_DOCS         "YES")
@@ -179,7 +179,7 @@ if(Doxygen_FOUND)
 	set(DOXYGEN_CLASS_DIAGRAMS           "YES")
 	set(DOXYGEN_DIA_PATH                 "")
 	set(DOXYGEN_HIDE_UNDOC_RELATIONS     "YES")
-	set(DOXYGEN_HAVE_DOT                 "YES") # Doxygen_DOT_FOUND from find_package will be true here
+	set(DOXYGEN_HAVE_DOT                 "YES")
 	set(DOXYGEN_DOT_NUM_THREADS          "0")
 	set(DOXYGEN_DOT_FONTNAME             "Helvetica")
 	set(DOXYGEN_DOT_FONTSIZE             "10")
@@ -200,7 +200,7 @@ if(Doxygen_FOUND)
 	set(DOXYGEN_DIRECTORY_GRAPH          "YES")
 	set(DOXYGEN_DOT_IMAGE_FORMAT         "png")
 	set(DOXYGEN_INTERACTIVE_SVG          "NO")
-	set(DOXYGEN_DOT_PATH                 "") # Doxygen will use Doxygen_DOT_EXECUTABLE from find_package
+	set(DOXYGEN_DOT_PATH                 "")
 	set(DOXYGEN_DOTFILE_DIRS             "")
 	set(DOXYGEN_MSCFILE_DIRS             "")
 	set(DOXYGEN_DIAFILE_DIRS             "")
