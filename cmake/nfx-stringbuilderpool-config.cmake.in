@@ -1,0 +1,45 @@
+#==============================================================================
+# nfx-stringbuilderpool - CMake Package Configuration
+#==============================================================================
+# This file provides CMake targets for the nfx-stringbuilderpool library.
+# 
+# Usage:
+#   find_package(nfx-stringbuilderpool REQUIRED)
+#   target_link_libraries(your_target PRIVATE nfx-stringbuilderpool::nfx-stringbuilderpool)  # Shared library
+#   # OR
+#   target_link_libraries(your_target PRIVATE nfx-stringbuilderpool::static)        # Static library
+#
+# Available targets:
+#   nfx-stringbuilderpool::nfx-stringbuilderpool - Shared library (StringBuilderPool)
+#   nfx-stringbuilderpool::static        - Static library (StringBuilderPool)
+#==============================================================================
+
+@PACKAGE_INIT@
+
+# Version information
+set(NFX_STRINGBUILDERPOOL_VERSION "@PROJECT_VERSION@")
+set(NFX_STRINGBUILDERPOOL_VERSION_MAJOR "@PROJECT_VERSION_MAJOR@")
+set(NFX_STRINGBUILDERPOOL_VERSION_MINOR "@PROJECT_VERSION_MINOR@")
+set(NFX_STRINGBUILDERPOOL_VERSION_PATCH "@PROJECT_VERSION_PATCH@")
+
+# Installation paths (for reference)
+set_and_check(NFX_STRINGBUILDERPOOL_INCLUDE_DIR "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set_and_check(NFX_STRINGBUILDERPOOL_LIB_DIR "@PACKAGE_CMAKE_INSTALL_LIBDIR@")
+
+# Our library dependencies (none - self-contained library)
+
+# Include the targets file
+include("${CMAKE_CURRENT_LIST_DIR}/nfx-stringbuilderpool-targets.cmake")
+
+# For multi-config generators, include config-specific targets if available
+if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/nfx-stringbuilderpool-targets-${CMAKE_BUILD_TYPE}.cmake")
+    include("${CMAKE_CURRENT_LIST_DIR}/nfx-stringbuilderpool-targets-${CMAKE_BUILD_TYPE}.cmake")
+endif()
+
+# Verify that the expected targets are available
+if(NOT TARGET nfx-stringbuilderpool::nfx-stringbuilderpool AND NOT TARGET nfx-stringbuilderpool::static)
+    message(FATAL_ERROR "nfx-stringbuilderpool installation is broken: no library targets found")
+endif()
+
+# Check that the requested components are available
+check_required_components(nfx-stringbuilderpool)

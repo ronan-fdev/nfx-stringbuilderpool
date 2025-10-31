@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions
+    url: https://github.com/ronan-fdev/nfx-stringbuilderpool/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📚 Documentation
+    url: https://ronan-fdev.github.io/nfx-stringbuilderpool/
+    about: Browse the full documentation
