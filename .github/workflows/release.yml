@@ -127,7 +127,7 @@ jobs:
           cat SHA256SUMS.txt
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: linux-gcc-packages
@@ -223,7 +223,7 @@ jobs:
           Get-Content SHA256SUMS.txt
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: windows-msvc-packages
@@ -288,7 +288,7 @@ jobs:
           cat SHA256SUMS-source.txt
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         if: always()
         with:
           name: source-packages
